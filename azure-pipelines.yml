@@ -26,6 +26,6 @@ stages:
         command: buildAndPush
         repository: $(imageRepository)        
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
-        containerRegistry: $(dockerRegistryServiceConnection)
+        containerRegistry: 'kayflowContainerRegistry'
         tags: |
           $(tag)
